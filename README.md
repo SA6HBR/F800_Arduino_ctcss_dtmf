@@ -1,4 +1,4 @@
-#Ericsson F800 with arduino ctcss encoder and decoder
+# Ericsson F800 with arduino ctcss encoder and decoder
 
 This is a Beta and has not been tested yet.
 
