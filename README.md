@@ -19,12 +19,13 @@ Möjligt behövs det en operationsförstärkare för att höja utgående subton.
 
 ### Funktionsbeskrivning av koden:
 Man ställer in vilka kanaler som skall skannas.
-Första kanalen används enbart för att styra starta och stoppa skanning.
-Den kanalen som lyssnas på när skanning är stoppad.
+Första kanalen används enbart för att styra "starta" och "stoppa" skanning, alltså den kanalen som lyssnas på när skanning är stoppad.
 Resterande kanaler används för repeaterfunktion. Samma kanal kan användas flera gånger om den skall användas med flera subtoner.
+Det måste vara lika många i varje array.
 
-char *reciverChannelText[] = {"CH 1", "CH 2", "CH 3"};
-byte      reciverChannel[] = {     1,      2,      3}; //F802 Channel
+Val av text som skall stå i displayen och vilken kanalnummer i F800.
+char *reciverChannelText[] = {"CH 1", "CH 2", "CH 3"}; //F800 Channel name
+byte      reciverChannel[] = {     1,      2,      3}; //F802 Channel number
 
 
 Val av ingående och utgående subtoner. Första tonen används inte för den ställs in på annat ställe.
@@ -36,9 +37,9 @@ int scanOff    = 0; //ctcss 67.0 for stop scanning
 int scanOn     = 5; //ctcss 77.0 for starting scanning
 
 ## Useful Links
-* [CircuitDiagram](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/doc/F800_Arduino_ctcss/KiCad/CircuitDiagram.pdf)
-* [ArduinoNanoPinout](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/doc/F800_Arduino_ctcss/Arduino/ArduinoNanoPinout.pdf)
-* [ArduinoCode](https://github.com/SA6HBR/F800_Arduino_ctcss/Arduino/F800_Arduino_ctcss/F800_Arduino_ctcss.ino)
+* [CircuitDiagram](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/KiCad/CircuitDiagram.pdf)
+* [ArduinoNanoPinout](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/Arduino/ArduinoNanoPinout.pdf)
+* [ArduinoCode](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/Arduino/F800_Arduino_ctcss/F800_Arduino_ctcss.ino)
 
 * [ctcss-encoder](https://bitbucket.org/teckel12/arduino-new-tone/wiki/Home)
 * [ctcss-decoder](https://github.com/yo3hjv/Arduino/blob/master/CTCSS%20fast%20decoder)
