@@ -10,15 +10,14 @@ Fungerar hemma på bänken, men har inte povkört som repeater ännu.
 Delar av kod har jag bland annat fått från:
 YO3HJV, ON4ADI & ON7EQ samt Tim Eckel
 
-Funktionsbeskrivning av elektroniken: (Komponenterna är mer valda av vad som ligger på hyllan än 100% rätt.)
-
+### Funktionsbeskrivning av elektroniken: (Komponenterna är mer valda av vad som ligger på hyllan än 100% rätt.)
 En LM317-modul för stabilisera drivspänningen från F800 till 8v. Behövde ett par extra kondensatorer för att inte Arduinon skulle störas av sändning.
 En LM324 operationsförstärkare som lågpassfiler för ingående subton. Mitt val av komponenter får en bryt frekvens 153hz. fc= 1/(2πRC) 47nF 22k
 Låpassfilter för utgående subton. Detta för att gå från fyrkantsvåg till sinus. Mitt val av komponenter får en bryt frekvens 159hz. fc= 1/(2πRC) 100R 10uF
 Möjligt behövs det en operationsförstärkare för att höja utgående subton.
 "Sound bypass" 150nF spärrar inkommande subton att gå igenom radion.
 
-Funktionsbeskrivning av koden:
+### Funktionsbeskrivning av koden:
 Man ställer in vilka kanaler som skall skannas.
 Första kanalen används enbart för att styra starta och stoppa skanning.
 Den kanalen som lyssnas på när skanning är stoppad.
