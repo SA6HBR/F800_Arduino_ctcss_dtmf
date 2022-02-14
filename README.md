@@ -1,27 +1,26 @@
 # Ericsson F800 with arduino ctcss encoder and decoder
 
-This is a Beta and has not been tested yet.
+This is a Beta and has not been tested yet.  
 
-Only text in Swedish.
+Only text in Swedish.  
 
-Arduino som avkodar och kodar ctcss.
-Fungerar hemma på bänken, men har inte povkört som repeater ännu.
+Arduino som avkodar och kodar ctcss.  
+Fungerar hemma på bänken, men har inte povkört som repeater ännu.  
 
-Delar av kod har jag bland annat fått från:
-YO3HJV, ON4ADI & ON7EQ samt Tim Eckel
+Delar av kod har jag bland annat fått från: YO3HJV, ON4ADI & ON7EQ samt Tim Eckel
 
 ### Funktionsbeskrivning av elektroniken: (Komponenterna är mer valda av vad som ligger på hyllan än 100% rätt.)
-En LM317-modul för stabilisera drivspänningen från F800 till 8v. Behövde ett par extra kondensatorer för att inte Arduinon skulle störas av sändning.
-En LM324 operationsförstärkare som lågpassfiler för ingående subton. Mitt val av komponenter får en bryt frekvens 153hz. fc= 1/(2πRC) 47nF 22k
-Låpassfilter för utgående subton. Detta för att gå från fyrkantsvåg till sinus. Mitt val av komponenter får en bryt frekvens 159hz. fc= 1/(2πRC) 100R 10uF
-Möjligt behövs det en operationsförstärkare för att höja utgående subton.
-"Sound bypass" 150nF spärrar inkommande subton att gå igenom radion.
+En LM317-modul för stabilisera drivspänningen från F800 till 8v. Behövde ett par extra kondensatorer för att inte Arduinon skulle störas av sändning.  
+En LM324 operationsförstärkare som lågpassfiler för ingående subton. Mitt val av komponenter får en bryt frekvens 153hz. fc= 1/(2πRC) 47nF 22k  
+Låpassfilter för utgående subton. Detta för att gå från fyrkantsvåg till sinus. Mitt val av komponenter får en bryt frekvens 159hz. fc= 1/(2πRC) 100R 10uF  
+Möjligt behövs det en operationsförstärkare för att höja utgående subton.  
+"Sound bypass" 150nF spärrar inkommande subton att gå igenom radion.  
 
 ### Funktionsbeskrivning av koden:
-Man ställer in vilka kanaler som skall skannas.
-Första kanalen används enbart för att styra "starta" och "stoppa" skanning, alltså den kanalen som lyssnas på när skanning är stoppad.
-Resterande kanaler används för repeaterfunktion. Samma kanal kan användas flera gånger om den skall användas med flera subtoner.
-Det måste vara lika många i varje array.
+Man ställer in vilka kanaler som skall skannas.  
+Första kanalen används enbart för att styra "starta" och "stoppa" skanning, alltså den kanalen som lyssnas på när skanning är stoppad.  
+Resterande kanaler används för repeaterfunktion. Samma kanal kan användas flera gånger om den skall användas med flera subtoner.  
+Det måste vara lika många i varje array.  
 
 Val av text som skall stå i displayen och vilken kanalnummer i F800.  
 char *reciverChannelText[] = {"CH 1", "CH 2", "CH 3"}; //F800 Channel name  
@@ -32,9 +31,9 @@ Val av ingående och utgående subtoner. Första tonen används inte för den st
 int           ctcssForRX[] = {     0,      7,      9}; //ctcss for RX  
 int           ctcssForTX[] = {     0,      9,      7}; //ctcss for TX  
 
-Val av subton för starta och stoppa skanning
-int scanOff    = 0; //ctcss 67.0 for stop scanning  
-int scanOn     = 5; //ctcss 77.0 for starting scanning
+Val av subton för starta och stoppa skanning  
+int scanOff    = 0; //ctcss 67.0 for stop scanning    
+int scanOn     = 5; //ctcss 77.0 for starting scanning  
 
 ## Useful Links
 * [CircuitDiagram](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/KiCad/CircuitDiagram.pdf)
