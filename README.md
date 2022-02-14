@@ -23,14 +23,14 @@ Första kanalen används enbart för att styra "starta" och "stoppa" skanning, a
 Resterande kanaler används för repeaterfunktion. Samma kanal kan användas flera gånger om den skall användas med flera subtoner.
 Det måste vara lika många i varje array.
 
-Val av text som skall stå i displayen och vilken kanalnummer i F800.
-char *reciverChannelText[] = {"CH 1", "CH 2", "CH 3"}; //F800 Channel name
-byte      reciverChannel[] = {     1,      2,      3}; //F802 Channel number
+Val av text som skall stå i displayen och vilken kanalnummer i F800.  
+char *reciverChannelText[] = {"CH 1", "CH 2", "CH 3"}; //F800 Channel name  
+byte      reciverChannel[] = {     1,      2,      3}; //F802 Channel number  
 
 
-Val av ingående och utgående subtoner. Första tonen används inte för den ställs in på annat ställe.
-int           ctcssForRX[] = {     0,      7,      9}; //ctcss for RX
-int           ctcssForTX[] = {     0,      9,      7}; //ctcss for TX
+Val av ingående och utgående subtoner. Första tonen används inte för den ställs in på annat ställe.  
+int           ctcssForRX[] = {     0,      7,      9}; //ctcss for RX  
+int           ctcssForTX[] = {     0,      9,      7}; //ctcss for TX  
 
 Val av subton för starta och stoppa skanning
 int scanOff    = 0; //ctcss 67.0 for stop scanning  
