@@ -5,7 +5,7 @@ This is a Beta and has not been tested yet.
 Only text in Swedish.  
 
 Arduino som avkodar och kodar ctcss.  
-Fungerar hemma på bänken, men har inte povkört som repeater ännu.  
+Fungerar hemma på bänken, men har inte provkört som repeater ännu.  
 
 Delar av kod har jag bland annat fått från: YO3HJV, ON4ADI & ON7EQ samt Tim Eckel
 
