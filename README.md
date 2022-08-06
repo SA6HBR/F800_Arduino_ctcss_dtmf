@@ -1,8 +1,8 @@
-#F800 with arduino ctcss encoder / decoder
+# Ericsson F800 with arduino ctcss encoder / decoder and dtmf decode
 
 This is a Beta and we are testing it now.
 
-Only text in Swedish.
+Only text in Swedish. 
 
 Arduino som avkodar och kodar ctcss.
 Fungerar hemma på bänken, men har inte povkört som repeater ännu.
@@ -19,10 +19,10 @@ Funktionsbeskrivning av koden:
 Kod ver 1 styr med ctcss och kod ver 2 styr via dtmf.
 
 ## Useful Links
-* [CircuitDiagram](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/doc/F800_Arduino_ctcss/KiCad/CircuitDiagram.pdf)
-* [ArduinoNanoPinout](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/doc/F800_Arduino_ctcss/Arduino/ArduinoNanoPinout.pdf)
-* [ArduinoCodeCTCSS](https://github.com/SA6HBR/F800_Arduino_ctcss/Arduino/F800_Arduino_ctcss/F800_Arduino_ctcss.ino)
-* [ArduinoCodeDTMF](https://github.com/SA6HBR/F800_Arduino_ctcss/Arduino/F800_Arduino_ctcss/F800_Arduino_dtmf.ino)
+* [CircuitDiagram](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/KiCad/CircuitDiagram.pdf)
+* [ArduinoNanoPinout](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/Arduino/ArduinoNanoPinout.pdf)
+* [ArduinoCodeCTCSS](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/Arduino/F800_Arduino_ctcss/F800_Arduino_ctcss.ino)
+* [ArduinoCodeDTMF](https://github.com/SA6HBR/F800_Arduino_ctcss/blob/main/Arduino/F800_Arduino_dtmf/F800_Arduino_dtmf.ino)
 
 * [F800 hardware](http://komradio.com/f800.html)
 
